@@ -1,0 +1,21 @@
+web:
+    build: .
+    command: python manage.py runserver 0.0.0.0:8000
+    volumes:
+        - .:/code
+    ports:
+        - "8000:8000"
+    links:
+        - db
+        - sock
+rd:
+    image: redis
+db:
+    image: postgres
+sock:
+    image: centrifugo/centrifugo
+    ports:
+        - "7999:7999"
+    volumes:
+        - ./centrifugo:/centrifugo
+    command: centrifugo -p 7999 -d True
