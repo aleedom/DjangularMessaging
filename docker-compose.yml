@@ -8,8 +8,6 @@ web:
     links:
         - db
         - sock
-rd:
-    image: redis
 db:
     image: postgres
 sock:
