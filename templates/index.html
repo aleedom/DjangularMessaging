@@ -4,21 +4,27 @@
     <head>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width" />
-        <title>dj-angular</title>
+        <title>Realtime Angular</title>
         <style src="{% static "bootstrap/dist/css/bootstrap.css"%}"></style>
     </head>
 
-    <body ng-app="demoapp">
-        <h1>Django Angular</h1>
-        <div ng-controller="DemoCtrl">
-            <div class="data">
-            </div>
-            <button ng-click="save()">Click</button>
-        </div>
+    <body ng-app="messagingApp">
+        <h1>Realtime Angular</h1>
 
-        <script type="text/JavaScript" src="{% static "angular/angular.js" %}"></script>
+
+        <!-- node_modules found in <PROJECT_ROOT>/node_modules -->
         <script type="text/JavaScript" src="{% static "jquery/dist/jquery.js" %}"></script>
         <script type="text/JavaScript" src="{% static "bootstrap/dist/js/bootstrap.js" %}"></script>
-        <script type="text/JavaScript" src="{% static "js/app.js" %}"></script>
+        <script type="text/JavaScript" src="{% static "angular/angular.js" %}"></script>
+        <script type="text/JavaScript" src="{% static "angular-resource/angular-resource.js" %}"></script>
+        <script type="text/JavaScript" src="{% static "angular-cookies/angular-cookies.js" %}"></script>
+        <script type="text/JavaScript" src="{% static "angular-sanitize/angular-sanitize.js" %}"></script>
+        <script type="text/JavaScript" src="{% static "angular-route/angular-route.js" %}"></script>
+        <!-- end node_modules-->
+
+        <!-- JS for Angular app  found ind <PROJECT_ROOT>/static/app/.. -->
+        <script type="text/JavaScript" src="{% static "app/js/app.js" %}"></script>
+        <script type="text/JavaScript" src="{% static "app/js/controllers/login.js" %}"></script>
+        <!-- end custom js-->
     </body>
 </html>
