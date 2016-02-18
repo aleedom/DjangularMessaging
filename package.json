@@ -1,0 +1,24 @@
+{
+  "name": "messaging",
+  "version": "0.1.0",
+  "description": "Simple application to demonstrate realtime messaging with django and centrifugo",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "github.com/aleedom/messaging.git"
+  },
+  "keywords": [
+    "angularjs",
+    "django"
+  ],
+  "author": "Andrew Leedom",
+  "license": "MIT",
+  "dependencies": {
+    "angular": "^1.5.0",
+    "bootstrap": "^3.3.6",
+    "jquery": "^2.2.0"
+  }
+}

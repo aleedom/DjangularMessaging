@@ -1,0 +1,24 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width" />
+        <title>dj-angular</title>
+        <style src="{% static "bootstrap/dist/css/bootstrap.css"%}"></style>
+    </head>
+
+    <body ng-app="demoapp">
+        <h1>Django Angular</h1>
+        <div ng-controller="DemoCtrl">
+            <div class="data">
+            </div>
+            <button ng-click="save()">Click</button>
+        </div>
+
+        <script type="text/JavaScript" src="{% static "angular/angular.js" %}"></script>
+        <script type="text/JavaScript" src="{% static "jquery/dist/jquery.js" %}"></script>
+        <script type="text/JavaScript" src="{% static "bootstrap/dist/js/bootstrap.js" %}"></script>
+        <script type="text/JavaScript" src="{% static "js/app.js" %}"></script>
+    </body>
+</html>
