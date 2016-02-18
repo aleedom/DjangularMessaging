@@ -8,6 +8,7 @@ web:
     links:
         - db
         - sock
+    env_file: .env
 db:
     image: postgres
 sock:
@@ -16,4 +17,4 @@ sock:
         - "7999:7999"
     volumes:
         - ./centrifugo:/centrifugo
-    command: centrifugo -p 7999 -d True
+    command: centrifugo --port=7999 --debug=True
