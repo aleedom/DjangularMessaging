@@ -36,7 +36,7 @@
         * @memberOf messaging.authentication.services.Authentication
         */
         function register(email, username, password) {
-            return $http.post('/api/accounts', {
+            return $http.post('/api/accounts/', {
                 username: username,
                 password: password,
                 email: email

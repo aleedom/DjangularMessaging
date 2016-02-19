@@ -10,27 +10,25 @@ class AccountViewSet(viewsets.ModelViewSet):
     lookup_field = 'username'
     queryset = Account.objects.all()
     serializer_class = AccountSerializer
-    permission_classes = (permissions.AllowAny)
 
     def get_permissions(self):
-        return (permissions.AllowAny,)
-
         if self.request.method in permissions.SAFE_METHODS:
             return (permissions.AllowAny(),)
+
         if self.request.method == 'POST':
-            print("####HERE####")
             return (permissions.AllowAny(),)
 
-        return (permissions.IsAuthenticated, IsAccountOwner,)
+        return (permissions.IsAuthenticated(), IsAccountOwner(),)
 
     def create(self, request):
         serializer = self.serializer_class(data=request.data)
-
+        print("IN CREATE", request.data)
         if serializer.is_valid():
             Account.objects.create_user(**serializer.validated_data)
 
             return Response(serializer.validated_data, status=status.HTTP_201_CREATED)
+
         return Response({
             'status': 'Bad request',
-            'message': 'Account could not be created with recieved data.'
+            'message': 'Account could not be created with received data.'
         }, status=status.HTTP_400_BAD_REQUEST)
