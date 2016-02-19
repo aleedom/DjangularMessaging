@@ -24,6 +24,7 @@
             getAuthenticatedAccount: getAuthenticatedAccount,
             isAuthenticated: isAuthenticated,
             login: login,
+            logout: logout,
             register: register,
             setAuthenticatedAccount: setAuthenticatedAccount,
             unauthenticate: unauthenticate
@@ -58,7 +59,8 @@
             * @desc Log 'Register Failure: Failed to Register!' to the console
             */
             function registerErrorFn(data, status, headers, config) {
-                console.error('Register Failure: Failed to Register!');
+                console.error("Register Error");
+                console.error(data);
             }
         }
         /**
@@ -89,6 +91,7 @@
             */
             function loginErrorFn(data, status, headers, config) {
                 console.error('LoginError: Failed to login!');
+                console.error(data);
             }
         }
         /**
@@ -134,6 +137,37 @@
         function unauthenticate() {
             delete $cookies.authenticatedAccount;
         }
+
+
+        /**
+        * @name logout
+        * @desc Try to log the user out
+        * @returns {Promise}
+        * @memberOf thinkster.authentication.services.Authentication
+        */
+        function logout() {
+            return $http.post('/api/auth/logout/')
+                .then(logoutSuccessFn, logoutErrorFn);
+
+            /**
+            * @name logoutSuccessFn
+            * @desc Unauthenticate and redirect to index with page reload
+            */
+            function logoutSuccessFn(data, status, headers, config) {
+                Authentication.unauthenticate();
+
+            window.location = '/';
+            }
+
+            /**
+            * @name logoutErrorFn
+            * @desc Log 'LogoutError: Failed to login!' to the console
+            */
+            function logoutErrorFn(data, status, headers, config) {
+                console.error('LogoutError: Failed to login!');
+            }
+        }
+
     }
 
 })();

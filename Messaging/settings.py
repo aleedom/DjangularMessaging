@@ -45,6 +45,7 @@ INSTALLED_APPS = [
     'compressor',
 
     'authentication',
+    'chat',
 ]
 
 MIDDLEWARE_CLASSES = [
