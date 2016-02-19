@@ -2,4 +2,5 @@ Django
 psycopg2
 djangorestframework
 djoser
+django_compressor
 cent

@@ -1,0 +1,17 @@
+{% load compress %}
+{% load staticfiles %}
+
+{% compress js %}
+<script type="text/javascript" src="{% static 'node_modules/jquery/dist/jquery.js' %}"></script>
+<script type="text/javascript" src="{% static 'node_modules/bootstrap/dist/js/bootstrap.js' %}"></script>
+<script type="text/javascript" src="{% static 'node_modules/bootstrap-material-design/dist/js/material.js' %}"></script>
+<script type="text/javascript" src="{% static 'node_modules/bootstrap-material-design/dist/js/ripples.js' %}"></script>
+<script type="text/javascript" src="{% static 'node_modules/underscore/underscore.js' %}"></script>
+
+<script type="text/javascript" src="{% static 'node_modules/angular/angular.js' %}"></script>
+<script type="text/javascript" src="{% static 'node_modules/angular-route/angular-route.js' %}"></script>
+<script type="text/javascript" src="{% static 'node_modules/angular-cookies/angular-cookies.js' %}"></script>
+<script type="text/javascript" src="{% static 'node_modules/ngDialog/js/ngDialog.js' %}"></script>
+
+<script type="text/javascript" src="{% static 'javascripts/thinkster.js' %}"></script>
+{% endcompress %}

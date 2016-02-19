@@ -1,0 +1,12 @@
+{% load compress %}
+{% load staticfiles %}
+
+{% compress css %}
+<link rel="stylesheet" type="text/css" href="{% static 'node_modules/bootstrap/dist/css/bootstrap.css' %}" />
+<link rel="stylesheet" type="text/css" href="{% static 'node_modules/bootstrap-material-design/dist/css/material.css' %}" />
+<link rel="stylesheet" type="text/css" href="{% static 'node_modules/bootstrap-material-design/dist/css/ripples.min.css' %}" />
+<link rel="stylesheet" type="text/css" href="{% static 'node_modules/ngDialog/css/ngDialog.css' %}" />
+<link rel="stylesheet" type="text/css" href="{% static 'node_modules/ngDialog/css/ngDialog-theme-default.css' %}" />
+
+<link rel="stylesheet" type="text/css" href="{% static 'css/styles.css' %}" />
+{% endcompress %}

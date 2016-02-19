@@ -1,30 +1,22 @@
-{% load staticfiles %}
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width" />
-        <title>Realtime Angular</title>
-        <style src="{% static "bootstrap/dist/css/bootstrap.css"%}"></style>
-    </head>
+<html ng-app="messaging">
+<head>
+  <title>Angular-Messaging</title>
 
-    <body ng-app="messagingApp">
-        <h1>Realtime Angular</h1>
+  <base href="/" />
 
+  {% include 'stylesheets.html' %}
+</head>
 
-        <!-- node_modules found in <PROJECT_ROOT>/node_modules -->
-        <script type="text/JavaScript" src="{% static "jquery/dist/jquery.js" %}"></script>
-        <script type="text/JavaScript" src="{% static "bootstrap/dist/js/bootstrap.js" %}"></script>
-        <script type="text/JavaScript" src="{% static "angular/angular.js" %}"></script>
-        <script type="text/JavaScript" src="{% static "angular-resource/angular-resource.js" %}"></script>
-        <script type="text/JavaScript" src="{% static "angular-cookies/angular-cookies.js" %}"></script>
-        <script type="text/JavaScript" src="{% static "angular-sanitize/angular-sanitize.js" %}"></script>
-        <script type="text/JavaScript" src="{% static "angular-route/angular-route.js" %}"></script>
-        <!-- end node_modules-->
+<body>
+  {% include 'navbar.html' %}
 
-        <!-- JS for Angular app  found ind <PROJECT_ROOT>/static/app/.. -->
-        <script type="text/JavaScript" src="{% static "app/js/app.js" %}"></script>
-        <script type="text/JavaScript" src="{% static "app/js/controllers/login.js" %}"></script>
-        <!-- end custom js-->
-    </body>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-xs-12 ng-view"></div>
+    </div>
+  </div>
+
+  {% include 'javascripts.html' %}
+</body>
 </html>
