@@ -1,11 +1,16 @@
 from django.conf.urls import url, include
-from django.contrib import admin
+
+from rest_framework import routers
+
+from authentication.views import AccountViewSet
 
 from Messaging.views import IndexView
 
+router = routers.SimpleRouter()
+router.register(r'accounts', AccountViewSet)
+
 
 urlpatterns = [
-    url(r'^admin/', admin.site.urls),
-    url(r'^auth/', include('djoser.urls.authtoken')),
-    url(r'', IndexView.as_view(), name='index')
+    url(r'^api/', include(router.urls)),
+    url(r'^.*$', IndexView.as_view(), name='index'),
 ]

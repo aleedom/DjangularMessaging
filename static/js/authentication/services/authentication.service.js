@@ -35,10 +35,11 @@
         * @returns {Promise}
         * @memberOf messaging.authentication.services.Authentication
         */
-        function register(username, password) {
-            return $http.post('/auth/register/', {
+        function register(email, username, password) {
+            return $http.post('/api/accounts', {
                 username: username,
                 password: password,
+                email: email
             });
         }
     }
