@@ -22,10 +22,10 @@
         /**
         * @name register
         * @desc Register a new user
-        * @memberOf thinkster.authentication.controllers.RegisterController
+        * @memberOf messaging.authentication.controllers.RegisterController
         */
         function register() {
-            Authentication.register(vm.email, vm.password, vm.username);
+            Authentication.register(vm.username, vm.password);
         }
     }
 })();

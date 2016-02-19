@@ -32,12 +32,11 @@
         * @desc Try to register a new user
         * @param {string} username The username entered by the user
         * @param {string} password The password entered by the user
-        * @param {string} email The email entered by the user
         * @returns {Promise}
         * @memberOf messaging.authentication.services.Authentication
         */
-        function register(email, password, username) {
-            return $http.post('/auth/login/', {
+        function register(username, password) {
+            return $http.post('/auth/register/', {
                 username: username,
                 password: password,
             });

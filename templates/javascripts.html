@@ -4,14 +4,17 @@
 {% compress js %}
 <script type="text/javascript" src="{% static 'bower_components/jquery/dist/jquery.js' %}"></script>
 <script type="text/javascript" src="{% static 'bower_components/bootstrap/dist/js/bootstrap.js' %}"></script>
-<script type="text/javascript" src="{% static 'bower_components/bootstrap-material-design/dist/js/material.js' %}"></script>
-<script type="text/javascript" src="{% static 'bower_components/bootstrap-material-design/dist/js/ripples.js' %}"></script>
-<script type="text/javascript" src="{% static 'bower_components/underscore/underscore.js' %}"></script>
 
 <script type="text/javascript" src="{% static 'bower_components/angular/angular.js' %}"></script>
 <script type="text/javascript" src="{% static 'bower_components/angular-route/angular-route.js' %}"></script>
 <script type="text/javascript" src="{% static 'bower_components/angular-cookies/angular-cookies.js' %}"></script>
-<script type="text/javascript" src="{% static 'bower_components/ngDialog/js/ngDialog.js' %}"></script>
 
-<script type="text/javascript" src="{% static 'javascripts/messaging.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/messaging.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/messaging.config.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/messaging.routes.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/authentication/authentication.module.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/authentication/services/authentication.service.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/authentication/controllers/register.controller.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/layout/layout.module.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/layout/controllers/navbar.controller.js' %}"></script>
 {% endcompress %}
