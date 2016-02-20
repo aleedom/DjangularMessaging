@@ -1,5 +1,6 @@
 aside {
   overflow-y: auto;
+  overflow-x: hidden;
   background: #2A2D34;
   border-right: 2px solid #3c3e41;
   float: left;
@@ -32,7 +33,7 @@ main .title {
 }
 main .title_box {
   margin: 0;
-  height: 20vh;
+  height: 16.3vh;
   text-align: center;
   background-color: #1B7AA0;
   color: white;
@@ -48,4 +49,7 @@ main .title_box {
 
 .space {
   padding-bottom: 5vh;
+}
+.main {
+    padding: 0;
 }

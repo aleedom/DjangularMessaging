@@ -1,21 +1,29 @@
 <!DOCTYPE html>
 <html ng-app="messaging">
 <head>
-  <title>Angular-Messaging</title>
+  <title>Djangular Messaging</title>
 
-  <base href="/" />
+  <base href="/"/>
 
   {% include 'stylesheets.html' %}
 </head>
 
 <body>
-  {% include 'navbar.html' %}
+    <main class="main col-xs-12">
+        <aside>
+            <div class="row btm-border space">
+                <h2>Conversations</h2>
+                <button type="button" class="btn btn-primary center-block">Start Conversation</button>
+            </div>
+        </aside>
 
-  <div class="container-fluid">
-    <div class="row">
-      <div class="col-xs-12 ng-view"></div>
-    </div>
-  </div>
+        <div class="wide title_box">
+            <h1 class="title"> Djangular Messaging
+        </div>
+        <div class="row">
+            <div class="col-xs-12 ng-view"></div>
+        </div>
+    </main>
 
   {% include 'javascripts.html' %}
 </body>
