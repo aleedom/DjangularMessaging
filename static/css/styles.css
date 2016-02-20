@@ -3,10 +3,7 @@ aside {
   overflow-x: hidden;
   background: #2A2D34;
   border-right: 2px solid #3c3e41;
-  float: left;
   height: 100vh;
-  padding: 1rem;
-  width: 15%;
 }
 aside h2 {
   color: #2598d5;
@@ -53,4 +50,10 @@ aside h3 {
 .hori-nav {
     background-color: #2A2D34;
     border-color: #3c3e41;
+}
+
+.navbar {
+    border: 2px solid #3c3e41;
+    margin-bottom: 0;
+    border-radius: 0;
 }

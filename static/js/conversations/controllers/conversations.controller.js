@@ -40,6 +40,7 @@
             if (current !== origonal) {
                 vm.conversations = [];
             }
+
         }
      }
  })();
