@@ -19,19 +19,14 @@ aside h3 {
   margin: 0;
 }
 
-main {
-  box-sizing: border-box;
-  float: left;
-  width: 85%;
-}
-main .title {
+.title {
   padding: 3vh;
   margin: 0;
   height: 15vh;
   text-align: center;
   color: white;
 }
-main .title_box {
+.title_box {
   margin: 0;
   height: 16.3vh;
   text-align: center;
@@ -50,6 +45,12 @@ main .title_box {
 .space {
   padding-bottom: 5vh;
 }
-.main {
+
+.no-padding {
     padding: 0;
+}
+
+.hori-nav {
+    background-color: #2A2D34;
+    border-color: #3c3e41;
 }

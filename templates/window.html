@@ -1,5 +1,5 @@
 <nav class="navbar navbar-inverse" role="navigation" ng-controller="NavbarController as vm">
-  <div class="container-fluid hori-nav">
+  <div class="container-fluid">
     <div class="navbar-header">
       <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#not-google-plus-nav">
         <span class="sr-only">Toggle Navigation</span>
@@ -7,10 +7,10 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="/"></a>
+      <a class="navbar-brand" href="/">Djangular Messaging</a>
     </div> <!-- ./navbar-header -->
 
-    <div class="collapse navbar-collapse hori-nav">
+    <div class="collapse navbar-collapse" id="not-google-plus-nav">
       <ul class="nav navbar-nav pull-right">
         {% if user.is_authenticated %}
           <li class="red_text"><a href="/+{{ user.username }}">+{{ user.username }}</a></li>

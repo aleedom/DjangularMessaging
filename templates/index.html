@@ -9,21 +9,31 @@
 </head>
 
 <body>
-    <main class="main col-xs-12">
-        <aside>
+<div class="container-fluid no-padding">
+    <div class="row">
+        <aside class="col-md-2 no-padding">
             <div class="row btm-border space">
                 <h2>Conversations</h2>
                 <button type="button" class="btn btn-primary center-block">Start Conversation</button>
             </div>
         </aside>
+        <div class="col-md-10 no-padding">
+            <div class="title_box">
+                <h1 class="title"> Djangular Messaging</h1>
+                    {% include 'navbar.html' %}
+            </div>
+            <div class="row">
 
-        <div class="wide title_box">
-            <h1 class="title"> Djangular Messaging
+                <div class="col-xs-12 ng-view">
+
+                </div>
+            </div>
         </div>
-        <div class="row">
-            <div class="col-xs-12 ng-view"></div>
-        </div>
-    </main>
+    </div>
+</div>
+
+
+
 
   {% include 'javascripts.html' %}
 </body>
