@@ -5,7 +5,7 @@ from chat.models import Message, Conversation
 
 
 class MessageSerializer(serializers.ModelSerializer):
-    author = AccountSerializer(read_only=True, required=False)
+    author = serializers.StringRelatedField(read_only=True, required=False)
 
     class Meta:
         model = Message
@@ -14,9 +14,10 @@ class MessageSerializer(serializers.ModelSerializer):
 
 
 class ConversationSerializer(serializers.ModelSerializer):
-    users = AccountSerializer(many=True)
+    users = serializers.StringRelatedField(many=True)
+    owner = serializers.StringRelatedField()
     messages = MessageSerializer(many=True)
 
     class Meta:
         model = Conversation
-        fields = ('name', 'users', 'owner')
+        fields = ('name', 'owner', 'users', 'messages')

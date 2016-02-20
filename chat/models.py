@@ -15,11 +15,11 @@ from django.db import models
 from authentication.models import Account
 
 
-class Conversation(models.model):
+class Conversation(models.Model):
     name = models.CharField(unique=True, max_length=100)
-    users = models.ManyToManyField('Account')
+    users = models.ManyToManyField('authentication.Account', related_name='users')
     owner = models.ForeignKey(
-            'Account',
+            'authentication.Account',
             on_delete=models.CASCADE,
             blank=False
             )
@@ -28,10 +28,10 @@ class Conversation(models.model):
         return self.name
 
 
-class Message(models.model):
-    author = models.ForeignKey(Account)
+class Message(models.Model):
+    author = models.ForeignKey('authentication.Account')
     text = models.CharField(max_length=500)
-    Conversation = models.ForeignKey(Conversation)
+    Conversation = models.ForeignKey('Conversation', related_name='messages')
     created_at = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):
