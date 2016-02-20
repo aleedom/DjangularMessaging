@@ -24,7 +24,7 @@
               controllerAs: 'vm',
               restrict: 'E',
               scope: {
-                  posts: '='
+                  conversations: '='
               },
               templateUrl: '/static/ng-templates/conversations/conversations.html'
           };

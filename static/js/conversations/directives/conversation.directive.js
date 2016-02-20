@@ -21,9 +21,9 @@
         var directive = {
             restrict: 'E',
             scope: {
-                post: '='
+                conversation: '='
             },
-            templateUrl: '/static/templates/conversations/converastion.html'
+            templateUrl: '/static/ng-templates/conversations/conversation.html'
         };
         return directive;
     }

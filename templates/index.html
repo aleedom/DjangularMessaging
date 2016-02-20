@@ -15,18 +15,12 @@
             {% include 'navbar.html' %}
     </div>
 
-    <div class="row"  ng-view>
-        <aside class="col-md-2 no-padding">
-            <div class="row btm-border space">
-                <h2>Conversations</h2>
-                <button type="button" class="btn btn-primary center-block">Start Conversation</button>
-            </div>
-        </aside>
+    <div class="row"  >
         <div class="col-md-10 no-padding">
 
             <div class="row">
 
-                <div class="col-xs-12">
+                <div class="col-xs-12" ng-view>
 
                 </div>
             </div>

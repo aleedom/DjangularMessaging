@@ -17,8 +17,7 @@
     */
     function IndexController($scope, Authentication, Conversations) {
         var vm = this;
-        vm.isAuthenticated = Authentication.isAuthenticated();
-        vm.conversations = [];
+        vm.columns = [];
 
         activate();
 
@@ -34,7 +33,7 @@
                 vm.conversations.unshift(conversation);
             });
             $scope.$on('conversation.created.error', function () {
-                vm.posts.shift();
+                vm.conversations.shift();
             });
 
             /**
@@ -43,9 +42,9 @@
             */
             function conversationsSuccessFn(data, status, headers, config) {
                 console.log("conversations returned");
-                console.log(data);
                 vm.conversations = data.data;
-                console.log(vm.conversations && vm.conversations.length);
+                console.log(vm.conversations.length);
+                console.log(vm.conversations);
             }
 
             /**

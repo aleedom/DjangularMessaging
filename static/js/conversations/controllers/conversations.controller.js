@@ -15,10 +15,9 @@
      * @namespace ConversationsController
      */
      function ConversationsController($scope) {
-         var vm = this;
-         vm.columns = [];
-
-         activate();
+        var vm = this;
+        vm.columns = [];
+        activate();
         /**
         * @name activate
         * @desc Actions to be performed when this controller is instanciated
@@ -26,7 +25,6 @@
         */
         function activate() {
             $scope.$watchCollection(function () { return $scope.conversations; }, render);
-            $scope.$watch(function() { return $(window).width(); }, render);
         }
 
         /**
@@ -37,9 +35,6 @@
         * @memberof messaging.conversatinos.controllers.ConversationsController
         */
         function render(current, origonal) {
-            if (current !== origonal) {
-                vm.conversations = [];
-            }
 
         }
      }
