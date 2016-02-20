@@ -1,0 +1,25 @@
+<div class="row">
+  <div class="col-md-4 col-md-offset-4">
+    <h1>New Conversation</h1>
+
+    <div class="well">
+      <form role="form" ng-submit="vm.submit()">
+        <div class="alert alert-danger" ng-show="error" ng-bind="error">{{message}}</div>
+
+        <div class="form-group">
+          <label for="new__conversation__name">Conversation Name</label>
+          <input type="text" class="form-control" id="new__conversation__name" ng-model="vm.conversation_name" placeholder="ex. conversation1" />
+        </div>
+
+        <div class="form-group">
+          <label for="new__conversation__user">Users</label>3
+          <input type="text" class="form-control" id="new__conversation__user" ng-model="vm.conversation_users" placeholder="mom, dad, hotstuff92, fluffybunnies78" />
+        </div>
+
+        <div class="form-group">
+          <button type="submit" class="btn btn-primary">Submit</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

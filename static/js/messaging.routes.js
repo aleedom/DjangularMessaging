@@ -24,6 +24,10 @@
             controller: 'IndexController',
             controllerAs: 'vm',
             templateUrl: '/static/ng-templates/layout/index.html'
+        }).when('/newconversation', {
+            controller: 'NewConversationController',
+            controllerAs: 'vm',
+            templateUrl: '/static/ng-templates/conversations/new-conversation.html'
         }).otherwise('/');
     }
 })();

@@ -10,20 +10,13 @@
 
 <body>
 <div class="container-fluid no-padding">
-    <div class="title_box">
+    <div class="row title_box">
         <h1 class="title"> Djangular Messaging</h1>
             {% include 'navbar.html' %}
     </div>
 
     <div class="row"  >
-        <div class="col-md-10 no-padding">
-
-            <div class="row">
-
-                <div class="col-xs-12" ng-view>
-
-                </div>
-            </div>
+        <div class="container-fluid no-padding" ng-view>
         </div>
     </div>
 </div>

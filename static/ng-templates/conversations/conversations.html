@@ -3,7 +3,10 @@
 <aside class="col-md-2 no-padding">
     <div class="row btm-border space">
         <h2>Conversations</h2>
-        <button type="button" class="btn btn-primary center-block">Start Conversation</button>
+        <a class="btn btn-primary btn-fab center-block"
+            href="/newconversation"
+            ng-dialog="/static/ng-templates/conversations/new-conversation.html"
+            ng-dialog-controller="NewPostController as vm">Start Conversation</a>
     </div>
     <div ng-repeat="conversation in conversations">
         <conversation conversation="conversation"></conversation>
