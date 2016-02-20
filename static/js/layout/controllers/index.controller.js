@@ -27,7 +27,7 @@
         * @memberof messaging.layout.controllers.IndexController
         */
         function activate() {
-            Conversations.all().then(conversationsSuccessFn, conversationsErrorFn);
+            Conversations.my_conversations().then(conversationsSuccessFn, conversationsErrorFn);
 
             $scope.$on('conversation.created', function (event, conversation) {
                 vm.conversations.unshift(conversation);
@@ -41,10 +41,7 @@
             * @desc Upate conversations array on views
             */
             function conversationsSuccessFn(data, status, headers, config) {
-                console.log("conversations returned");
                 vm.conversations = data.data;
-                console.log(vm.conversations.length);
-                console.log(vm.conversations);
             }
 
             /**

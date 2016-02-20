@@ -13,7 +13,7 @@
     */
     function Conversations($http) {
         var Conversations = {
-            all: all,
+            my_conversations: my_conversations,
             create: create
         };
         return Conversations;
@@ -26,7 +26,7 @@
         * @returns {promise}
         * @memberof messaging.conversations.services.Conversations
         */
-        function all() {
+        function my_conversations() {
             return $http.get('/api/conversations/');
         }
 
