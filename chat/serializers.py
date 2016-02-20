@@ -1,6 +1,5 @@
 from rest_framework import serializers
 
-from authentication.serializers import AccountSerializer
 from chat.models import Message, Conversation
 
 
