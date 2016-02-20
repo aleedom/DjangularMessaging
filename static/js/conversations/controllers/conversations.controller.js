@@ -32,8 +32,8 @@
         /**
         * @name render
         * @desc Renders Posts into columns of approximately equal height
-        * @param {Array} current The current value of `vm.posts`
-        * @param {Array} original The value of `vm.posts` before it was updated
+        * @param {Array} current The current value of `vm.conversations`
+        * @param {Array} original The value of `vm.conversations` before it was updated
         * @memberof messaging.conversatinos.controllers.ConversationsController
         */
         function render(current, origonal) {

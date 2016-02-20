@@ -1,9 +1,19 @@
+<nav class="side_nav">>
+  <ul>
+    <li class="current"><a href="#">Home</a></li>
+    <li><a href="#">Portfolio</a></li>
+    <li><a href="#">Blog</a></li>
+    <li><a href="#">About</a></li>
+    <li><a href="#">Contact</a></li>
+  </ul>
+</nav>
+
+
+
 <div id="sidebar-wrapper" ng-cloak>
     <ul class="sidebar-nav">
         <li class="sidebar-brand">
-            <a href="#">
-                New Conversation
-            </a>
+            <button class="btn btn-primary">New Conversation</button>
         </li>
         <li ng-repeat="conversation in conversations">
             <conversation conversation="conversation"></conversation>

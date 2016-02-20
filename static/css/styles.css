@@ -1,0 +1,51 @@
+aside {
+  overflow-y: auto;
+  background: #2A2D34;
+  border-right: 2px solid #3c3e41;
+  float: left;
+  height: 100vh;
+  padding: 1rem;
+  width: 15%;
+}
+aside h2 {
+  color: #2598d5;
+  text-align: center;
+}
+aside h3 {
+  padding: 3vh;
+  color: #949599;
+  text-align: left;
+  margin: 0;
+}
+
+main {
+  box-sizing: border-box;
+  float: left;
+  width: 85%;
+}
+main .title {
+  padding: 3vh;
+  margin: 0;
+  height: 15vh;
+  text-align: center;
+  color: white;
+}
+main .title_box {
+  margin: 0;
+  height: 20vh;
+  text-align: center;
+  background-color: #1B7AA0;
+  color: white;
+}
+
+.btm-border {
+  border-bottom: 2px solid #3c3e41;
+}
+
+.btn-primary {
+  background-color: #1B7AA0;
+}
+
+.space {
+  padding-bottom: 5vh;
+}

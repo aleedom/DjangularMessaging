@@ -11,8 +11,13 @@ class ConversationListView(generics.ListCreateAPIView):
     serializer_class = ConversationSerializer
     permission_classes = (permissions.IsAuthenticated,)
 
-    def list(self, request, account_username=None):
-        queryset = Conversation.objects.filter(users__icontains=account_username)
+    def list(self, request):
+        # really bad hack for now not sure how to do the lookup
+        queryset = Conversation.objects.all()
+        for conv in queryset:
+            if request.user not in conv.users.all():
+                queryset.remove(conv)
+
         serializer = self.serializer_class(queryset, many=True)
         return Response(serializer.data)
 
