@@ -6,6 +6,7 @@
             'messaging.config',
             'messaging.routes',
             'messaging.authentication',
+            'messaging.chat',
             'messaging.layout'
         ]);
     angular

@@ -22,7 +22,7 @@
         /**
         * @name logout
         * @desc Log the user out
-        * @memberOf messaging.layout.controllers.NavbarController
+        * @memberof messaging.layout.controllers.NavbarController
         */
         function logout() {
             Authentication.logout();

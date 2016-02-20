@@ -37,7 +37,7 @@
         * @param {string} username The username entered by the user
         * @param {string} password The password entered by the user
         * @returns {Promise}
-        * @memberOf messaging.authentication.services.Authentication
+        * @memberof messaging.authentication.services.Authentication
         */
         function register(email, username, password) {
             return $http.post('/api/accounts/', {
@@ -69,7 +69,7 @@
         * @param {string} email The email entered by the user
         * @param {string} password The password entered by the user
         * @returns {Promise}
-        * @memberOf messaging.authentication.services.Authentication
+        * @memberof messaging.authentication.services.Authentication
         */
         function login(email, password) {
             return $http.post('/api/auth/login/', {
@@ -98,7 +98,7 @@
         * @name getAuthenticatedAccount
         * @desc Return the currently authenticated account
         * @returns {object|undefined} Account if authenticated, else `undefined`
-        * @memberOf messaging.authentication.services.Authentication
+        * @memberof messaging.authentication.services.Authentication
         */
         function getAuthenticatedAccount() {
             if (!$cookies.authenticatedAccount) {
@@ -111,7 +111,7 @@
         * @name isAuthenticated
         * @desc Check if the current user is authenticated
         * @returns {boolean} True is user is authenticated, else false.
-        * @memberOf messaging.authentication.services.Authentication
+        * @memberof messaging.authentication.services.Authentication
         */
         function isAuthenticated() {
             return !!$cookies.authenticatedAccount;
@@ -122,7 +122,7 @@
         * @desc Stringify the account object and store it in a cookie
         * @param {Object} user The account object to be stored
         * @returns {undefined}
-        * @memberOf messaging.authentication.services.Authentication
+        * @memberof messaging.authentication.services.Authentication
         */
         function setAuthenticatedAccount(account) {
             $cookies.authenticatedAccount = JSON.stringify(account);
@@ -132,7 +132,7 @@
         * @name unauthenticate
         * @desc Delete the cookie where the user object is stored
         * @returns {undefined}
-        * @memberOf messaging.authentication.services.Authentication
+        * @memberof messaging.authentication.services.Authentication
         */
         function unauthenticate() {
             delete $cookies.authenticatedAccount;
@@ -143,7 +143,7 @@
         * @name logout
         * @desc Try to log the user out
         * @returns {Promise}
-        * @memberOf thinkster.authentication.services.Authentication
+        * @memberof thinkster.authentication.services.Authentication
         */
         function logout() {
             return $http.post('/api/auth/logout/')

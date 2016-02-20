@@ -22,7 +22,7 @@
         /**
         * @name activate
         * @desc Actions to be performed when this controller is instantiated
-        * @memberOf thinkster.authentication.controllers.RegisterController
+        * @memberof thinkster.authentication.controllers.RegisterController
         */
         function activate() {
             if (Authentication.isAuthenticated()) {
@@ -32,7 +32,7 @@
         /**
         * @name register
         * @desc Register a new user
-        * @memberOf messaging.authentication.controllers.RegisterController
+        * @memberof messaging.authentication.controllers.RegisterController
         */
         function register() {
             Authentication.register(vm.email, vm.username, vm.password);
