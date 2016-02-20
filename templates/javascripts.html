@@ -3,6 +3,7 @@
 
 {% compress js %}
 <script type="text/javascript" src="{% static 'bower_components/jquery/dist/jquery.js' %}"></script>
+
 <script type="text/javascript" src="{% static 'bower_components/bootstrap/dist/js/bootstrap.js' %}"></script>
 
 <script type="text/javascript" src="{% static 'bower_components/angular/angular.js' %}"></script>
@@ -18,6 +19,14 @@
 <script type="text/javascript" src="{% static 'js/authentication/controllers/register.controller.js' %}"></script>
 <script type="text/javascript" src="{% static 'js/authentication/controllers/login.controller.js' %}"></script>
 
+<script type="text/javascript" src="{% static 'js/conversations/conversations.module.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/conversations/directives/conversations.directive.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/conversations/services/conversations.services.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/conversations/controllers/conversations.controller.js' %}"></script>
+
+
 <script type="text/javascript" src="{% static 'js/layout/layout.module.js' %}"></script>
 <script type="text/javascript" src="{% static 'js/layout/controllers/navbar.controller.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/layout/controllers/index.controller.js' %}"></script>
+
 {% endcompress %}
