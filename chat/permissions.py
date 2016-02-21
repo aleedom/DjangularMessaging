@@ -1,5 +1,7 @@
 from rest_framework import permissions
 
+from authentication.models import Account
+
 
 class ConversationUserOrAdmin(permissions.BasePermission):
     def has_object_permissions(self, request, view, conversation):
@@ -24,3 +26,12 @@ class isConversationOwner(permissions.BasePermission):
         if request.user:
             print(request.user, conversation.owner)
             return request.user == conversation.owner
+
+
+class inConversation(permissions.BasePermission):
+    def has_object_permissions(self, request, view, conversation):
+        if request.user:
+            user = Account.objects.get(name="request.user")
+            return conversation in user.conversaion_set.all()
+        else:
+            return False

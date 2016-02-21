@@ -6,8 +6,8 @@ from rest_framework.response import Response
 from authentication.models import Account
 
 from chat.models import Conversation
-from chat.permissions import ConversationUserOrAdmin
-from chat.serializers import ConversationSerializer
+from chat.permissions import ConversationUserOrAdmin, inConversation
+from chat.serializers import ConversationSerializer, MessageSerializer
 
 
 class ConversationListView(generics.ListCreateAPIView):
@@ -59,3 +59,30 @@ class ConverstaionDetailView(generics.RetrieveUpdateDestroyAPIView):
     queryset = Conversation.objects.all()
     serializer_class = ConversationSerializer
     permission_classes = (permissions.IsAuthenticated, ConversationUserOrAdmin)
+
+
+class MessageListView(generics.ListCreateAPIView):
+    queryset = Conversation.objects.all()
+    serializer_class = MessageSerializer
+    permission_classes = (inConversation,)
+
+    def list(self, request, name):
+        conv = Conversation.objects.get(name=name)
+        serializer = MessageSerializer(conv.messages.all(), many=True)
+        return Response(serializer.data)
+
+    def create(self, request, name):
+        data = {
+            'author': request.user,
+            'text': request.data['text'],
+            'conversation': name,
+        }
+        serializer = MessageSerializer(data=data)
+        if serializer.is_valid():
+            serializer.save()
+            return Response(serializer.validated_data, status=status.HTTP_201_CREATED)
+        else:
+            return Response({
+                'status': 'Bad request',
+                'message': 'Message could not be created with received data.'
+            }, status=status.HTTP_400_BAD_REQUEST)

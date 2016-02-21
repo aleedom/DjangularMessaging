@@ -1,0 +1,18 @@
+<aside class="col-md-2 no-padding">
+    <div class="row btm-border space">
+        <h2>Conversations</h2>
+        <a class="btn btn-primary btn-fab center-block"
+            href="/newconversation">Start Conversation</a>
+    </div>
+    <conversations conversations="vm.conversations"></conversations>
+</aside>
+<div class="container-fluid no-padding col-md-10">
+    <div class="row">
+        <div class="col-md-10" ng-repeat="message in messages">
+            <message message="message"></message>
+        </div>
+    </div>
+    <footer>
+        <textarea class="form-control" style="min-width: 100%"></textarea>
+    </footer>
+</div>

@@ -7,7 +7,8 @@
             'messaging.routes',
             'messaging.authentication',
             'messaging.conversations',
-            'messaging.layout'
+            'messaging.layout',
+            'messaging.messages'
         ]);
     angular
         .module('messaging.config', []);

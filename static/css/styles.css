@@ -3,29 +3,26 @@ aside {
   overflow-x: hidden;
   background: #2A2D34;
   border-right: 2px solid #3c3e41;
-  height: 80vh;
+  height: 82.8vh;
 }
 aside h2 {
   color: #2598d5;
   text-align: center;
 }
 aside h3 {
-  padding: 3vh;
   color: #949599;
   text-align: left;
   margin: 0;
 }
 
 .title {
-  padding: 3vh;
   margin: 0;
-  height: 15vh;
+  height: 10vh;
   text-align: center;
   color: white;
 }
 .title_box {
   margin: 0;
-  height: 16.3vh;
   text-align: center;
   background-color: #1B7AA0;
   color: white;
@@ -40,7 +37,6 @@ aside h3 {
 }
 
 .space {
-  padding-bottom: 5vh;
 }
 
 .no-padding {
@@ -56,4 +52,13 @@ aside h3 {
     border: 2px solid #3c3e41;
     margin-bottom: 0;
     border-radius: 0;
+}
+body{
+    min-height:100%;
+    padding:0;
+    margin:0;
+    position:relative;
+}
+html {
+    height: 100%;
 }
