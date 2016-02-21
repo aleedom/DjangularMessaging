@@ -1,5 +1,7 @@
 from rest_framework import serializers
 
+from authentication.models import Account
+
 from chat.models import Message, Conversation
 
 
@@ -13,10 +15,15 @@ class MessageSerializer(serializers.ModelSerializer):
 
 
 class ConversationSerializer(serializers.ModelSerializer):
-    users = serializers.StringRelatedField(many=True)
-    owner = serializers.StringRelatedField()
-    messages = MessageSerializer(many=True)
+    users = serializers.PrimaryKeyRelatedField(queryset=Account.objects.all(), required=False, many=True)
+    owner = serializers.PrimaryKeyRelatedField(queryset=Account.objects.all(), required=False)
+    messages = MessageSerializer(required=False, many=True)
 
     class Meta:
         model = Conversation
         fields = ('name', 'owner', 'users', 'messages')
+
+    def get_validation_exclusions(self, *args, **kwargs):
+        exclusions = super(ConversationSerializer, self).get_validation_exclusions()
+
+        return exclusions + ['owner']

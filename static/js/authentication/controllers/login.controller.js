@@ -21,7 +21,7 @@
         /**
         * @name activate
         * @desc Actions to be performed when this controller is instantiated
-        * @memberof thinkster.authentication.controllers.LoginController
+        * @memberof messaging.authentication.controllers.LoginController
         */
         function activate() {
             if (Authentication.isAuthenticated()) {
@@ -32,10 +32,10 @@
         /**
         * @name login
         * @desc Log the user in
-        * @memberof thinkster.authentication.controllers.LoginController
+        * @memberof messaging.authentication.controllers.LoginController
         */
         function login() {
-            Authentication.login(vm.email, vm.password);
+            Authentication.login(vm.username, vm.password);
         }
     }
 })();

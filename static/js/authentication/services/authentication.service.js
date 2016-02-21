@@ -39,11 +39,10 @@
         * @returns {Promise}
         * @memberof messaging.authentication.services.Authentication
         */
-        function register(email, username, password) {
+        function register(username, password) {
             return $http.post('/api/accounts/', {
                 username: username,
-                password: password,
-                email: email
+                password: password
             }).then(registerSuccessFn, registerErrorFn);
 
             /**
@@ -51,7 +50,7 @@
             * @desc Log the new user in
             */
             function registerSuccessFn(data, status, headers, config) {
-                Authentication.login(email, password);
+                Authentication.login(username, password);
             }
 
             /**
@@ -65,15 +64,15 @@
         }
         /**
         * @name login
-        * @desc Try to log in with email `email` and password `password`
-        * @param {string} email The email entered by the user
+        * @desc Try to log in with username `username` and password `password`
+        * @param {string} username The username entered by the user
         * @param {string} password The password entered by the user
         * @returns {Promise}
         * @memberof messaging.authentication.services.Authentication
         */
-        function login(email, password) {
+        function login(username, password) {
             return $http.post('/api/auth/login/', {
-                email: email, password: password
+                username: username, password: password
             }).then(loginSuccessFn, loginErrorFn);
 
             /**
@@ -90,8 +89,7 @@
             * @desc Log 'LoginError: Failed to login!' to the console
             */
             function loginErrorFn(data, status, headers, config) {
-                console.error('LoginError: Failed to login!');
-                console.error(data);
+                var message = data.message;
             }
         }
         /**

@@ -4,11 +4,11 @@
 
     <div class="well">
       <form role="form" ng-submit="vm.login()">
-        <div class="alert alert-danger" ng-show="error" ng-bind="error">{{message}}</div>
+        <div class="alert alert-danger" ng-show="error" ng-bind="error">{{vm.message}}</div>
 
         <div class="form-group">
-          <label for="login__email">Email</label>
-          <input type="text" class="form-control" id="login__email" ng-model="vm.email" placeholder="ex. john@example.com" />
+          <label for="login__username">Username</label>
+          <input type="text" class="form-control" id="login__username" ng-model="vm.username" placeholder="ex. john@example.com" />
         </div>
 
         <div class="form-group">

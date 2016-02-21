@@ -35,7 +35,8 @@
         * @memberof messaging.authentication.controllers.RegisterController
         */
         function submit() {
-            Conversations.create(vm.name, vm.users);
-        }
+            Conversations.create(vm.conversation_name, vm.conversation_users.split(", "));
+            $location.url('/');
+}
     }
 })();

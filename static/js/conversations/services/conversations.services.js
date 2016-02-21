@@ -38,9 +38,11 @@
         * @memberof messaging.conversaions.services.Conversaions
         */
         function create(name, users) {
+            console.log(name);
             return $http.post('/api/conversations/', {
                 name: name,
-                users: users
+                users: users,
+
             });
         }
     }

@@ -35,7 +35,7 @@
         * @memberof messaging.authentication.controllers.RegisterController
         */
         function register() {
-            Authentication.register(vm.email, vm.username, vm.password);
+            Authentication.register(vm.username, vm.password);
         }
     }
 })();
