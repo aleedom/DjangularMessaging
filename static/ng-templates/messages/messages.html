@@ -8,11 +8,15 @@
 </aside>
 <div class="container-fluid no-padding col-md-10">
     <div class="row">
+        <h1>{{vm.messages}}</h1>
         <div class="col-md-10" ng-repeat="message in messages">
-            <message message="message"></message>
+
         </div>
     </div>
-    <footer>
-        <textarea class="form-control" style="min-width: 100%"></textarea>
-    </footer>
+
+        <div class="test form-inline col-xs-12">
+
+            <textarea class="col-md-9"></textarea>
+            <button class="btn-lg btn-primary col-md-1">Send</button>
+        </div>
 </div>

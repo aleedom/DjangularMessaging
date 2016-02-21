@@ -5,14 +5,14 @@ aside {
   border-right: 2px solid #3c3e41;
   height: 82.8vh;
 }
-aside h2 {
+h2 {
   color: #2598d5;
   text-align: center;
 }
-aside h3 {
-  color: #949599;
+h3 {
+  color: grey;
   text-align: left;
-  margin: 0;
+  margin-left: 5%;
 }
 
 .title {
@@ -55,10 +55,17 @@ aside h3 {
 }
 body{
     min-height:100%;
+    background-color: grey;
     padding:0;
     margin:0;
     position:relative;
 }
 html {
     height: 100%;
+}
+
+.test {
+    background-color: grey;
+    position: fixed;
+    bottom: 0;
 }
