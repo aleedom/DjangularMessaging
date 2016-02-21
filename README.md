@@ -15,6 +15,8 @@ To Run this projected You will need the latest versions of both docker and docke
 https://docs.docker.com/mac/
 https://docs.docker.com/compose/install/
 
+you will also need ot create a file called .env at the project root in which you create and store you django project secret.
+
 once you have all of those, run the following commands from the project root.
 
 bower install
