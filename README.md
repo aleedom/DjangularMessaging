@@ -18,6 +18,10 @@ https://docs.docker.com/compose/install/
 once you have all of those, run the following commands from the project root.
 
 bower install
+
 docker-compose run web ./manage.py migrate
+
 docker-compose up
+
 navigate your browser to localhost:8000
+
